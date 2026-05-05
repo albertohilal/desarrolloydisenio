@@ -8,8 +8,11 @@ import { DashboardSection } from "@/components/DashboardSection";
 import { ActivationFlow } from "@/components/ActivationFlow";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { MessageCircle } from "lucide-react";
+import Image from "next/image";
 
 const CTA_URL = "https://desarrolloydisenioweb.com.ar/demo-login";
+const WHATSAPP_URL = "https://wa.me/5491128809748";
 
 export default function Home() {
   return (
@@ -18,7 +21,7 @@ export default function Home() {
       <nav className="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
         <div className="container-custom h-20 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-[#75AADB] flex items-center justify-center text-white font-black text-xl">L</div>
+            <Image src="/logo-pajaro.webp" alt="LeadMaster" width={30} height={30} className="h-[1em] w-auto object-contain" />
             <span className="text-xl font-black text-[#110402] tracking-tight">LeadMaster</span>
           </div>
           
@@ -60,6 +63,16 @@ export default function Home() {
       <ActivationFlow />
 
       <Footer />
+
+      <a
+        href={WHATSAPP_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Enviar mensaje por WhatsApp"
+        className="fixed right-4 bottom-6 z-[60] inline-flex items-center justify-center rounded-full bg-secondary text-secondary-foreground w-12 h-12 shadow-xl hover:bg-secondary/90 transition-colors"
+      >
+        <MessageCircle className="w-4 h-4" />
+      </a>
     </main>
   );
 }

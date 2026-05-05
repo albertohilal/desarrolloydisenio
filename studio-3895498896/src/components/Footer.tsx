@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export function Footer() {
   return (
     <footer className="py-12 sm:py-16 bg-white border-t border-gray-100">
@@ -5,7 +7,7 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-8 sm:gap-12 items-center">
           <div className="space-y-4 text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start gap-2">
-              <div className="w-8 h-8 rounded-lg bg-[#75AADB] flex items-center justify-center text-white font-black text-xl">L</div>
+              <Image src="/logo-pajaro.webp" alt="LeadMaster" width={30} height={30} className="h-[1em] w-auto object-contain" />
               <span className="text-2xl font-black text-[#110402] tracking-tight">LeadMaster</span>
             </div>
             <p className="text-xs text-gray-500 font-bold uppercase tracking-widest">
