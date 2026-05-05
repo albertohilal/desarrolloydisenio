@@ -3,7 +3,7 @@
  * Plugin Name: LeadMaster Landing
  * Plugin URI: https://desarrolloydisenio.com.ar/
  * Description: Inserta la landing estática de LeadMaster desde un shortcode.
- * Version: 1.1.0
+ * Version: 1.2.0
  * Author: Desarrollo y Diseño
  * Author URI: https://desarrolloydisenio.com.ar/
  * License: GPL-2.0-or-later
@@ -46,8 +46,23 @@ function leadmaster_landing_render_clean_page(): void
     $html = (string) file_get_contents($landing_file);
     $assets_url = trailingslashit(plugins_url('assets', __FILE__));
 
-    $html = str_replace('./_next/', $assets_url . '_next/', $html);
-    $html = str_replace('./favicon.ico', $assets_url . 'favicon.ico', $html);
+    $html = str_replace(
+        array('./_next/', '/_next/'),
+        $assets_url . '_next/',
+        $html
+    );
+
+    $html = str_replace(
+        array('./favicon.ico', '/favicon.ico'),
+        $assets_url . 'favicon.ico',
+        $html
+    );
+
+    $html = str_replace(
+        array('./logo-pajaro.webp', '/logo-pajaro.webp'),
+        $assets_url . 'logo-pajaro.webp',
+        $html
+    );
 
     status_header(200);
     header('Content-Type: text/html; charset=UTF-8');
@@ -88,7 +103,7 @@ function leadmaster_landing_shortcode($atts): string
         $height = '4500px';
     }
 
-    $landing_url = plugins_url('assets/index.html', __FILE__);
+    $landing_url = add_query_arg('leadmaster_landing_page', '1', home_url('/'));
 
     ob_start();
     ?>
