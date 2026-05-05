@@ -18,6 +18,10 @@ pnpm-debug.log*
 # Archives and local exports
 *.zip
 
+# Local work artifacts
+AUXILIAR/
+CAPTURAS/
+
 # OS/editor files
 .DS_Store
 Thumbs.db
