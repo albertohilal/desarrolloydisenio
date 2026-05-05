@@ -1,0 +1,16 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-dashboard",
+      "description": "LeadMaster Client Dashboard Mockup",
+      "imageUrl": "https://picsum.photos/seed/leadmaster-dash/800/600",
+      "imageHint": "dashboard business analytics"
+    },
+    {
+      "id": "leads-visual",
+      "description": "Visual representation of validated leads",
+      "imageUrl": "https://picsum.photos/seed/leads-v/600/400",
+      "imageHint": "business networking connection"
+    }
+  ]
+}

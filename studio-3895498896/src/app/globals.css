@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 10 70% 3%; /* #110402 */
+    --card: 0 0% 100%;
+    --card-foreground: 10 70% 3%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 10 70% 3%;
+    --primary: 209 60% 66%; /* #75AADB */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 115 33% 41%; /* #4B8A44 */
+    --secondary-foreground: 0 0% 100%;
+    --muted: 209 30% 96%;
+    --muted-foreground: 10 10% 40%;
+    --accent: 23 100% 42%; /* #D65100 */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 209 30% 90%;
+    --input: 209 30% 90%;
+    --ring: 25 100% 50%; /* #FE6800 (CTA) */
+    --radius: 1.2rem;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+  img,
+  svg,
+  video,
+  canvas {
+    max-width: 100%;
+  }
+}
+
+.font-body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.font-headline {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container-custom {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .container-custom {
+    padding: 0 1rem;
+  }
+}
+
+.bg-subtle {
+  background-color: #F8FAFC;
+}
+
+.btn-cta {
+  @apply bg-[#FE6800] text-white hover:bg-[#E55D00] transition-all rounded-full font-bold shadow-lg shadow-[#FE6800]/20;
+}
+
+.glass-card {
+  @apply bg-white border border-gray-100 shadow-xl rounded-[24px];
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 4s infinite ease-in-out;
+}
+
+.animate-bounce-slow-delay {
+  animation: bounce-slow 4s infinite ease-in-out 2s;
+}
+
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
