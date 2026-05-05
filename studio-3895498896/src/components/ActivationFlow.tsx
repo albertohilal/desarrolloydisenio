@@ -8,6 +8,8 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { CheckCircle2, Send, Info } from "lucide-react";
 
+const CTA_URL = "https://desarrolloydisenioweb.com.ar/demo-login";
+
 export function ActivationFlow() {
   const [submitted, setSubmitted] = useState(false);
 
@@ -47,11 +49,13 @@ export function ActivationFlow() {
                     />
                   </div>
                   <Button 
-                    onClick={() => setSubmitted(true)}
+                    asChild
                     className="btn-cta w-full h-14 sm:h-16 text-base sm:text-xl shadow-xl shadow-[#FE6800]/20 flex gap-3 sm:gap-4"
                   >
-                    Confirmar requerimientos
-                    <Send className="w-6 h-6" />
+                    <a href={CTA_URL}>
+                      Confirmar requerimientos
+                      <Send className="w-6 h-6" />
+                    </a>
                   </Button>
                   <div className="flex flex-wrap items-center justify-center gap-6 text-[10px] font-black text-gray-400 uppercase tracking-widest pt-4">
                     <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#4B8A44]" /> Validación Humana</div>

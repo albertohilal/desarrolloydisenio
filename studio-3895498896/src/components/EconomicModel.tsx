@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Coins, ShieldCheck, Zap } from "lucide-react";
 
+const CTA_URL = "https://desarrolloydisenioweb.com.ar/demo-login";
+
 export function EconomicModel() {
   return (
     <section className="py-24 bg-[#110402] relative overflow-hidden text-white">
@@ -79,8 +81,8 @@ export function EconomicModel() {
               </div>
             </div>
 
-            <Button className="btn-cta w-full h-16 text-xl shadow-xl shadow-[#FE6800]/20">
-              Configurar requerimientos iniciales
+            <Button asChild className="w-full min-h-14 h-auto py-3 px-4 sm:h-16 text-base sm:text-xl leading-tight whitespace-normal !bg-[#FE6800] hover:!bg-[#E55D00] !text-white shadow-xl shadow-[#FE6800]/20">
+              <a href={CTA_URL}>Configurar requerimientos iniciales</a>
             </Button>
             
             <p className="text-center text-[10px] text-gray-400 font-medium uppercase tracking-tighter">

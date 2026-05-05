@@ -9,6 +9,8 @@ import { ActivationFlow } from "@/components/ActivationFlow";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 
+const CTA_URL = "https://desarrolloydisenioweb.com.ar/demo-login";
+
 export default function Home() {
   return (
     <main className="min-h-screen">
@@ -27,8 +29,8 @@ export default function Home() {
             <a href="#dashboard" className="hover:text-[#75AADB] transition-colors">Dashboard</a>
           </div>
 
-          <Button className="hidden md:inline-flex btn-cta px-6">
-            Activar servicio
+          <Button asChild className="hidden md:inline-flex btn-cta px-6">
+            <a href={CTA_URL}>Activar servicio</a>
           </Button>
         </div>
       </nav>

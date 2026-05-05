@@ -6,6 +6,8 @@ import { CheckCircle2, TrendingUp, Users, Wallet, MousePointer2 } from "lucide-r
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 
+const CTA_URL = "https://desarrolloydisenioweb.com.ar/demo-login";
+
 export function LeadMasterHero() {
   const dashImg = PlaceHolderImages.find(img => img.id === "hero-dashboard");
 
@@ -23,11 +25,11 @@ export function LeadMasterHero() {
             LeadMaster identifica empresas objetivo, inicia conversaciones por WhatsApp y Email, detecta interés real y entrega oportunidades comerciales con respaldo.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" className="btn-cta h-14 px-8 text-lg w-full sm:w-auto">
-              Configurar requerimientos
+            <Button asChild size="lg" className="btn-cta h-14 px-8 text-lg w-full sm:w-auto">
+              <a href={CTA_URL}>Configurar requerimientos</a>
             </Button>
-            <Button size="lg" variant="outline" className="rounded-full border-2 border-[#75AADB] text-[#75AADB] hover:bg-[#75AADB] hover:text-white px-8 h-14 text-lg font-bold w-full sm:w-auto">
-              Ver dashboard demo
+            <Button asChild size="lg" variant="outline" className="rounded-full border-2 border-[#75AADB] text-[#75AADB] hover:bg-[#75AADB] hover:text-white px-8 h-14 text-lg font-bold w-full sm:w-auto">
+              <a href={CTA_URL}>Ver dashboard demo</a>
             </Button>
           </div>
           
