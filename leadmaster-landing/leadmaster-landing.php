@@ -3,7 +3,7 @@
  * Plugin Name: LeadMaster Landing
  * Plugin URI: https://desarrolloydisenio.com.ar/
  * Description: Inserta la landing estática de LeadMaster desde un shortcode.
- * Version: 1.2.0
+ * Version: 1.2.5
  * Author: Desarrollo y Diseño
  * Author URI: https://desarrolloydisenio.com.ar/
  * License: GPL-2.0-or-later
@@ -45,24 +45,34 @@ function leadmaster_landing_render_clean_page(): void
 
     $html = (string) file_get_contents($landing_file);
     $assets_url = trailingslashit(plugins_url('assets', __FILE__));
+    $site_favicon_url = $assets_url . 'favico.webp?v=1.2.5';
+
+    $next_placeholder = '__LEADMASTER_NEXT__';
+    $favicon_placeholder = '__LEADMASTER_FAVICON__';
+    $logo_placeholder = '__LEADMASTER_LOGO__';
 
     $html = str_replace(
-        array('./_next/', '/_next/', '/leadmaster/_next/'),
-        $assets_url . '_next/',
+        array('/leadmaster/_next/', '/_next/', './_next/'),
+        $next_placeholder,
         $html
     );
 
     $html = str_replace(
-        array('./favicon.ico', '/favicon.ico', '/leadmaster/favicon.ico'),
-        $assets_url . 'favicon.ico',
+        array('/leadmaster/favicon.ico', '/favicon.ico', './favicon.ico'),
+        $favicon_placeholder,
         $html
     );
 
     $html = str_replace(
-        array('./logo-pajaro.webp', '/logo-pajaro.webp', '/leadmaster/logo-pajaro.webp'),
-        $assets_url . 'logo-pajaro.webp',
+        array('/leadmaster/logo-pajaro.webp', '/logo-pajaro.webp', './logo-pajaro.webp'),
+        $logo_placeholder,
         $html
     );
+
+    $html = str_replace($next_placeholder, $assets_url . '_next/', $html);
+    $html = str_replace($favicon_placeholder, $site_favicon_url, $html);
+    $html = str_replace($logo_placeholder, $assets_url . 'logo-pajaro.webp', $html);
+    $html = str_replace('type="image/x-icon"', 'type="image/webp"', $html);
 
     status_header(200);
     header('Content-Type: text/html; charset=UTF-8');

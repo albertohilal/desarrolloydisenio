@@ -4,6 +4,9 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'LeadMaster - Servicio Gestionado de Prospección B2B',
   description: 'LeadMaster identifica empresas objetivo, inicia conversaciones por WhatsApp y Email, detecta interés real y entrega oportunidades comerciales con respaldo.',
+  icons: {
+    icon: '/leadmaster/favico.webp?v=1.2.5',
+  },
 };
 
 export default function RootLayout({
