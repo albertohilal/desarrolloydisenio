@@ -21,7 +21,7 @@ export default function Home() {
       <nav className="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
         <div className="container-custom h-20 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Image src="/logo-pajaro.webp" alt="LeadMaster" width={30} height={30} className="h-[1em] w-auto object-contain" />
+            <Image src="/leadmaster/logo-pajaro.webp" alt="LeadMaster" width={30} height={30} className="h-[1em] w-auto object-contain" />
             <span className="text-xl font-black text-[#110402] tracking-tight">LeadMaster</span>
           </div>
           
@@ -32,7 +32,7 @@ export default function Home() {
             <a href="#dashboard" className="hover:text-[#75AADB] transition-colors">Dashboard</a>
           </div>
 
-          <Button asChild className="hidden md:inline-flex btn-cta px-6">
+          <Button asChild className="hidden lg:inline-flex btn-cta px-6">
             <a href={CTA_URL}>Activar servicio</a>
           </Button>
         </div>

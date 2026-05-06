@@ -1,0 +1,15 @@
+{
+  "name": "qa",
+  "version": "1.0.0",
+  "description": "Este control valida la landing en producción con foco en responsive y consistencia funcional.",
+  "main": "leadmaster-device-qa.spec.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1"
+  }
+}

@@ -21,6 +21,11 @@ pnpm-debug.log*
 # Local work artifacts
 AUXILIAR/
 CAPTURAS/
+qa/results/
+qa/test-results/
+qa/node_modules/
+test-results/
+playwright-report/
 
 # OS/editor files
 .DS_Store

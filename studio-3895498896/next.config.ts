@@ -2,6 +2,8 @@ import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
   output: 'export',
+  basePath: '/leadmaster',
+  assetPrefix: '/leadmaster/',
   trailingSlash: true,
   typescript: {
     ignoreBuildErrors: true,

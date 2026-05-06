@@ -47,19 +47,19 @@ function leadmaster_landing_render_clean_page(): void
     $assets_url = trailingslashit(plugins_url('assets', __FILE__));
 
     $html = str_replace(
-        array('./_next/', '/_next/'),
+        array('./_next/', '/_next/', '/leadmaster/_next/'),
         $assets_url . '_next/',
         $html
     );
 
     $html = str_replace(
-        array('./favicon.ico', '/favicon.ico'),
+        array('./favicon.ico', '/favicon.ico', '/leadmaster/favicon.ico'),
         $assets_url . 'favicon.ico',
         $html
     );
 
     $html = str_replace(
-        array('./logo-pajaro.webp', '/logo-pajaro.webp'),
+        array('./logo-pajaro.webp', '/logo-pajaro.webp', '/leadmaster/logo-pajaro.webp'),
         $assets_url . 'logo-pajaro.webp',
         $html
     );

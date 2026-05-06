@@ -56,7 +56,7 @@ export function LeadMasterHero() {
             />
             
             {/* Floating Metric Cards */}
-            <div className="hidden sm:flex absolute top-12 -left-8 glass-card p-4 items-center gap-4 animate-bounce-slow">
+            <div className="hidden lg:flex absolute top-12 -left-8 glass-card p-4 items-center gap-4 animate-bounce-slow">
               <div className="w-10 h-10 rounded-full bg-[#4B8A44]/10 flex items-center justify-center text-[#4B8A44]">
                 <Users className="w-5 h-5" />
               </div>
@@ -66,7 +66,7 @@ export function LeadMasterHero() {
               </div>
             </div>
 
-            <div className="hidden sm:flex absolute bottom-12 -right-6 glass-card p-4 items-center gap-4 animate-bounce-slow-delay">
+            <div className="hidden lg:flex absolute bottom-12 -right-6 glass-card p-4 items-center gap-4 animate-bounce-slow-delay">
               <div className="w-10 h-10 rounded-full bg-[#FE6800]/10 flex items-center justify-center text-[#FE6800]">
                 <Wallet className="w-5 h-5" />
               </div>
@@ -76,7 +76,7 @@ export function LeadMasterHero() {
               </div>
             </div>
 
-            <div className="hidden md:flex absolute -bottom-4 left-1/4 glass-card px-6 py-4 items-center gap-3 border-[#4B8A44]/30">
+            <div className="hidden xl:flex absolute -bottom-4 left-1/4 glass-card px-6 py-4 items-center gap-3 border-[#4B8A44]/30">
               <span className="w-3 h-3 rounded-full bg-[#4B8A44] animate-pulse"></span>
               <div>
                 <p className="text-sm font-black text-[#110402]">Interés detectado</p>

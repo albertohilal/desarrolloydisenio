@@ -10,7 +10,7 @@ export function DashboardSection() {
   ];
 
   return (
-    <section className="py-24 bg-[#F8FAFC]">
+    <section className="py-24 bg-[#F8FAFC] overflow-hidden">
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="order-2 lg:order-1 relative">
@@ -42,7 +42,7 @@ export function DashboardSection() {
             </div>
             
             {/* Background elements */}
-            <div className="absolute -z-10 -bottom-8 -right-8 w-64 h-64 bg-[#75AADB]/10 rounded-full blur-3xl"></div>
+            <div className="hidden lg:block absolute -z-10 -bottom-8 -right-8 w-64 h-64 bg-[#75AADB]/10 rounded-full blur-3xl"></div>
           </div>
 
           <div className="order-1 lg:order-2 space-y-8">
